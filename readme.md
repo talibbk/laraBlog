@@ -5,6 +5,7 @@ This is a simple blog app created for learning purpose using Laravel Framework 5
 
 - **Tagging**
 - **Categorization**
+- **Password reset/Contact email using MailTrap**
 - **Image Uploades**
 - **Comments**
 - **WYSIWYG editor for making posts**
