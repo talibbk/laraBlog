@@ -6,7 +6,9 @@
 
     <div class="row">
         <div class="col-md-8">
-        <img src="{{ asset('images/'.$post->image) }}" height="400" width="400" alt="" />
+
+        <img src="{{ asset('images/'.$post->image) }}" height="400" width="400" alt="" onerror="this.style.display='none'"/>
+
         <h1>{{ $post->title }}</h1>
         <p class="lead">{!! $post->body !!}</p>
         <hr>
