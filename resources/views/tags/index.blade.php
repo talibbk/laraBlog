@@ -36,6 +36,7 @@
 
                     {{Form::submit('Create New Tag',['class'=>'btn btn-primary btn-block mt-3'])}}
                 </dl>
+                <ul>
             </div>
         </div>
     </div>

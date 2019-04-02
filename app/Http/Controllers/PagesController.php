@@ -3,17 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Tag;
 use Illuminate\Http\Request;
 use Mail;
 use Session;
 
 
 
+
 class PagesController extends Controller{
 
     public function getIndex() {
+        $tags = Tag::all();
         $posts = Post::latest()->limit(4)->get();
-        return view("pages/welcome")->withPosts($posts);
+        return view("pages.welcome")->withPosts($posts)->withTags($tags);
+        //return View::make('pages.welcome',compact('posts','tags'));
+    }
+
+    public function showTags(){
+        $tags = Tag::all();
+        return view('pages.welcome')->withTags($tags);
     }
 
     // can use "  . " instead of "  / "

@@ -21,6 +21,7 @@ Route::post('contact','PagesController@postContact');
 Route::get('about', 'PagesController@getAbout');
 
 Route::get('/','PagesController@getIndex');
+// Route::get('/', ['uses' => 'PagesController@showTags']);
 
 Route::resource('posts','PostController');
 
@@ -39,4 +40,3 @@ Route::resource('tags','TagController',['except'=>['create']]);
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');

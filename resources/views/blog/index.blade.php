@@ -5,15 +5,15 @@
 @section('content')
 
     <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-8 offset-md-2 bg-dark text-white mt-3">
             <h1>Blog</h1>
         </div>
     </div>
     @foreach($posts as $post)
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>{{ $post->title }}</h2>
-            <h5>Published: {{ $post->created_at->toFormattedDateString() }}</h5>
+            <h3>{{ $post->title }}</h3>
+            <h5 class="text-muted">Published: {{ $post->created_at->toFormattedDateString() }}</h5>
 
             <p>{{ substr(strip_tags($post->body),0,250) }}{{ strlen(strip_tags($post->body))>250?'...':"" }}</p>
 
