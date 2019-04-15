@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Tag;
+use App\Category;
 use Illuminate\Http\Request;
 use Mail;
 use Session;
@@ -15,8 +16,9 @@ class PagesController extends Controller{
 
     public function getIndex() {
         $tags = Tag::all();
+        $categories = Category::all();
         $posts = Post::latest()->limit(4)->get();
-        return view("pages.welcome")->withPosts($posts)->withTags($tags);
+        return view("pages.welcome")->withPosts($posts)->withTags($tags)->withCategories($categories);
         //return View::make('pages.welcome',compact('posts','tags'));
     }
 

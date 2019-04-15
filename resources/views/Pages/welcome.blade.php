@@ -34,11 +34,20 @@
         
         <h2>Tags</h2>
         <hr>
-        <ul>
-        @foreach($tags as $tag)
-                <li><a href="{{ route('tags.show',$tag->id) }}">{{$tag->name}}</a></li>
-        @endforeach
-        </ul>
+            <ul>
+                @foreach($tags as $tag)
+                    <li><a href="{{ route('tags.show',$tag->id) }}">{{$tag->name}}</a></li>
+                @endforeach
+            </ul>
+        <br>
+
+        <h2>Categories</h2>
+        <hr>
+            <ul>
+                @foreach($categories as $category)
+                    <li><a href="{{ route('categories.show',$category->id) }}">{{$category->name}}</a></li>
+                @endforeach
+            </ul>
         </div>
     </div>
 @endsection
